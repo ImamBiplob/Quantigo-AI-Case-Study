@@ -14,5 +14,5 @@ data["combined_file"][0]["objects"][0]["classTitle"] = "car"
 data["combined_file"][0]["objects"][1]["classTitle"] = "car"
 data["combined_file"][1]["objects"][0]["classTitle"] = "number"
 
-jsonString = json.dumps(data)
+jsonString = json.dumps(data, indent=4)
 Path(f"./Combined File/combined_file.json").write_text(jsonString)

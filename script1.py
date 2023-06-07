@@ -44,7 +44,7 @@ for file in files:
     standardFormat[0]["dataset_name"] = fileName
 
     if (len(data["objects"]) == 0):
-        standardData = json.dumps(standardFormat)
+        standardData = json.dumps(standardFormat, indent=4)
         Path(
             f"./Formatted Files/formatted_{fileName}").write_text(standardData)
 
@@ -68,6 +68,6 @@ for file in files:
             standardFormat[0]["annotation_attributes"]["license_plate"]["Value"] = data["objects"][1]["tags"][1]["value"]
             standardFormat[0]["annotation_attributes"]["license_plate"]["Occlusion"] = 0
 
-        standardData = json.dumps(standardFormat)
+        standardData = json.dumps(standardFormat, indent=4)
         Path(
             f"./Formatted Files/formatted_{fileName}").write_text(standardData)
